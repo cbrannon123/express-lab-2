@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(methodOverride(_method));                                  //1.05.06 on youtube
+app.use(methodOverride('_method'));                                  
 
 app.use('/', indexRouter);
 app.use('/skills', skillsRouter);

@@ -7,8 +7,18 @@ const skills = [
 module.exports = {
     getAll,
     getOne,
-    create
+    create,
+    deleteOne,
+    update
 };
+
+function update(id, skill) {
+    skills[id] = skill;
+}
+
+function deleteOne(id) {
+  skills.splice(id, 1);
+}
 
 function create(skill) {
     skills.push(skill);
