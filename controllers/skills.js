@@ -11,6 +11,7 @@ module.exports = {
 };
 
 function update(req, res) {
+  req.body.have = !!req.body.have
   Skill.update(req.params.id, req.body)
   res.redirect(`/skills/${req.params.id}`)
 }

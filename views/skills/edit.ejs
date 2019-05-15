@@ -13,7 +13,7 @@
     <input type="text" name="skill" autocomplete="off"
     value="<%= skill.skill %>">
     <label>
-        <input name="have" <%= skill.have ? : 'checked' : '' %>>         1.43 youtube
+        <input type="checkbox" name="have" <%= skill.have ? 'checked' : '' %>>         
         Have
     </label>
     <button type="submit">Update Skill</button>
